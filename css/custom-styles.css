@@ -805,8 +805,8 @@ footer .phones:before {
     width: 0;
 }
 .slider-trustees .slide:hover .overlay {
-    border-bottom: 550px solid rgba(92, 124, 215, 0.8);
-    border-left: 550px solid transparent;
+    border-bottom: 800px solid rgba(92, 124, 215, 0.8);
+    border-left: 800px solid transparent;
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
     -webkit-transition: all 0.5s ease-out;

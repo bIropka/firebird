@@ -215,7 +215,7 @@ h2:before {
 ******* header ********
 **********************/
 
-header[role="banner"] {
+.main-header {
     background: transparent url('../source/content/background-top-outer.jpg') no-repeat top center;
     background-size: cover;
     margin-bottom: 160px;
@@ -437,7 +437,7 @@ nav ul li:hover a {
     -webkit-transform-origin: 0 50%;
     transform-origin: 0 50%;
 }
-.header-menu ul li:hover a, .header-menu ul .active a {
+.header-menu ul li:hover a {
     -moz-transform: rotateX(90deg) translateY(-30px);
     -ms-transform: rotateX(90deg) translateY(-30px);
     -webkit-transform: rotateX(90deg) translateY(-30px);
@@ -448,6 +448,25 @@ nav ul li:hover a {
 }
 .header-menu ul li:last-child:hover a::before, .header-menu ul li:last-child.active a::before {
     background: #b33847;
+}
+.header-menu ul li:nth-child(1).active a {
+    background-color: #d67c32;
+}
+.header-menu ul li:nth-child(2).active a {
+    background-color: #99ca41;
+}
+.header-menu ul li:nth-child(3).active a {
+    background-color: #b1127e;
+}
+.header-menu ul li:nth-child(4).active a {
+    background-color: #4c6ed4;
+}
+.header-menu ul li.active:hover a {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
 }
 
 /* header-banner */

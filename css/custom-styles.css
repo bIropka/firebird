@@ -217,6 +217,7 @@ h2:before {
 
 header[role="banner"] {
     background: transparent url('../source/content/background-top-outer.jpg') no-repeat top center;
+    background-size: cover;
     margin-bottom: 160px;
 }
 
@@ -233,6 +234,9 @@ nav {
     display: block;
     width: 68%;
     float: left;
+}
+.mobile-nav, .header-menu-nav {
+    display: none;
 }
 nav ul {
     height: 30px;
@@ -281,6 +285,7 @@ nav ul li:hover a {
     height: 30px;
     text-align: right;
     position: relative;
+    padding-top: 4px;
 }
 .callback {
     display: block;
@@ -493,24 +498,26 @@ nav ul li:hover a {
 .text-thanks:before {
     content: '';
     display: block;
-    width: 123px;
-    height: 112px;
+    width: 20%;
+    height: 50%;
     position: absolute;
     top: 0;
     right: 10px;
-    background: transparent url('../source/images/image-sun.png');
+    background: transparent url('../source/images/image-sun.png') no-repeat;
+    background-size: contain;
 }
 .text-thanks:after {
     content: '';
     display: block;
-    width: 85px;
-    height: 30px;
+    width: 15%;
+    height: 15%;
     margin: auto;
     position: absolute;
     bottom: 20px;
     left: 0;
     right: 0;
     background: transparent url('../source/images/icon-radio.png');
+    background-size: contain;
 }
 .text-thanks p {
     font-family: 'Roboto Light', sans-serif;
@@ -733,6 +740,7 @@ footer .phones:before {
 .footer-social {
     display: inline-block;
     float: right;
+    margin-top: 100px;
 }
 .footer-social p {
     font-size: 12px;
@@ -1002,6 +1010,7 @@ footer .phones:before {
     width: 85px;
     height: 136px;
     background: transparent url('../source/images/icon-to-help.png');
+    background-size: contain;
     position: absolute;
     top: -60px;
     right: -30px;
@@ -1198,5 +1207,133 @@ footer .phones:before {
 **********************/
 
 /**********************
-******* global ********
+****** max-media ******
 **********************/
+
+@media (max-width: 1280px) {
+    .wrapper {
+        max-width: 980px;
+    }
+    nav {
+        width: 60%;
+    }
+    .header-top .phones {
+        width: 32%;
+    }
+    .payment {
+        width: 70%;
+    }
+    .header-banner-main {
+        height: 390px;
+    }
+    .text-thanks {
+        padding: 5% 0 0 10%;
+    }
+    .text-thanks p, .text-thanks p span {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+    .school-name p {
+        font-size: 13px;
+    }
+    .on-map .school-address {
+        padding: 2% 0 0 2.5%;
+    }
+    .project-card .image-wrap {
+        margin-right: 2.5%;
+    }
+
+    .project-card h3, .news-card h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .project-card p, .news-card p {
+        line-height: 1.4;
+        max-height: 95px;
+        font-size: 14px;
+    }
+    .projects .to-help {
+        width: 63px;
+        height: 100px;
+        top: -35px;
+        right: 0;
+    }
+    .news-card {
+        height: 310px;
+        padding-bottom: 30px;
+    }
+    .seo-text .signature {
+        width: 20%;
+    }
+    .footer-contacts {
+        width: 40%;
+    }
+    .footer-controls {
+        width: 60%;
+    }
+    footer .address, footer .phones {
+        width: 48%;
+    }
+    footer .phones {
+        width: 45%;
+        margin-left: 5%;
+    }
+    .footer-controls .payment li {
+        margin-left: 0;
+    }
+    .footer-nav {
+        min-width: 200px;
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 980px) {
+    .header-top .wrapper {
+        padding: 0 2.5%;
+    }
+    .header-top .phones {
+        display: inline-block;
+        width: auto;
+    }
+    .callback {
+        width: 40px;
+        height: 40px;
+        top: 0;
+        left: -45px;
+    }
+    nav {
+        width: auto;
+    }
+    nav ul {
+        display: none;
+        height: auto;
+    }
+    nav ul li {
+        display: block;
+        margin-top: 5px;
+    }
+    .mobile-nav {
+        display: inline-block;
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 30px;
+        -webkit-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s;
+    }
+    .mobile-nav.active {
+        font-size: 24px;
+    }
+    .logo {
+        float: none;
+        margin: 20px auto;
+    }
+    .payment {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
+}

@@ -36,6 +36,11 @@ $(document).ready(function () {
 
     /*** others scripts **/
 
+    $('.mobile-nav').click(function() {
+        $(this).toggleClass('active');
+        $('nav ul').slideToggle();
+    });
+
     $(function($) {
         $('.checked-form').validatr({
             showall: true

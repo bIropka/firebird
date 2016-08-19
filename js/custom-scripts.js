@@ -29,7 +29,27 @@ $(document).ready(function () {
 
     $('.slider-trustees').slick({
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 981,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     /*** end of scripts for sliders **/
@@ -39,6 +59,10 @@ $(document).ready(function () {
     $('.mobile-nav').click(function() {
         $(this).toggleClass('active');
         $('nav ul').slideToggle();
+    });
+    $('.mobile-header-menu').click(function() {
+        $(this).toggleClass('active');
+        $('.header-menu ul').slideToggle();
     });
 
     $(function($) {

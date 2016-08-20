@@ -124,6 +124,13 @@ textarea, textarea:hover, textarea:active, textarea:focus {
     border: none;
 }
 
+.left-column {
+    float: left;
+}
+.right-column {
+    float: right;
+}
+
 .wrapper {
     width: 100%;
     max-width: 1280px;
@@ -216,7 +223,21 @@ h2:before {
 }
 
 .custom-button {
-
+    display: block;
+    width: 230px;
+    height: 40px;
+    text-align: center;
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 15px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative;
+}
+.custom-button:before {
+    content: '';
+    display: block;
+    height: 3px;
 }
 
 /* breadcrumbs */
@@ -868,7 +889,7 @@ footer .phones:before {
     position: relative;
     overflow: hidden;
 }
-.slider-trustees .slide:focus {
+.slick-slider .slide:focus {
     outline: none;
 }
 .slider-trustees .slide .overlay {
@@ -1291,13 +1312,13 @@ footer .phones:before {
 .top-banner-projects:after {
     background: transparent url('../source/content/triangle-projects.png') no-repeat center;
 }
-.top-banner-projects h1 {
+.top-banner .category-name {
     display: block;
     font-family: 'Roboto Black', sans-serif;
     font-size: 20px;
     color: #ffffff;
     position: absolute;
-    left: -3%;
+    left: -1%;
     top: 43%;
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -1305,7 +1326,7 @@ footer .phones:before {
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
-.top-banner-projects .tagline {
+.top-banner-projects .tagline, .top-banner-single-project h1 {
     font-family: 'Roboto Condensed Regular', sans-serif;
     font-size: 40px;
     text-transform: uppercase;
@@ -1520,8 +1541,190 @@ footer .phones:before {
 }
 
 /**********************
-******* global ********
+*** single-project ****
 **********************/
+
+.top-banner-single-project {
+    width: 60%;
+    padding: 3% 0 0;
+    height: 180px;
+}
+.top-banner-single-project:after {
+    width: 33.33333%;
+}
+.top-banner-single-project h1 {
+    display: inline-block;
+    padding-left: 30%;
+    overflow: hidden;
+    max-height: 100px;
+}
+
+.sidebar-single-project {
+    width: 40%;
+    text-align: center;
+}
+.sidebar-single-project .left-column {
+    width: 50%;
+    background: linear-gradient(to right, #ff7f08, #ff6d02);
+    height: 180px;
+    border: 30px solid #f1eee7;
+    border-right: none;
+}
+.sidebar-single-project .right-column {
+    width: 50%;
+    height: 180px;
+    background: linear-gradient(to bottom, #ffb211, #ff6d02);
+    padding: 30px 30px 30px 0;
+}
+.sidebar-single-project .right-column .inner-block {
+    background-color: #ffffff;
+    height: 100%;
+    overflow: hidden;
+}
+.sidebar-single-project p {
+    font-size: 14px;
+}
+.sidebar-single-project .value {
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 20px;
+}
+.sidebar-single-project .left-column p {
+    color: #ffffff;
+}
+.sidebar-single-project .left-column div, .sidebar-single-project .right-column .inner-block div {
+    margin: 12px 0;
+}
+
+/* article */
+.single-project article {
+    display: block;
+    position: relative;
+}
+.single-project .download-report {
+    background-color: #f9ad02;
+}
+.single-project .download-report:before {
+    background-color: #ff7f08;
+}
+.single-project .download-report:hover {
+    background-color: #ff7f08;
+}
+.single-project .image-wrap {
+    width: 260px;
+    height: 260px;
+}
+.single-project .image-wrap.left-column {
+    margin: 0 2% 0 0;
+}
+.single-project .image-wrap.right-column {
+    margin: 2% 0 2% 2%;
+}
+.single-project .download-report {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.single-project h3 {
+    display: inline-block;
+    font-family: 'Roboto Black', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.single-project p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.single-project ul {
+    margin: 20px 0;
+}
+.single-project ul li {
+    display: list-item;
+    list-style: square inside;
+    color: #d67c32;
+    font-size: 20px;
+}
+.single-project ul li p {
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 20px;
+    color: #676459;
+}
+.single-project blockquote {
+    display: block;
+    padding: 2% 1.5%;
+    font-family: 'Roboto BoldItalic', sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.single-project blockquote:hover {
+    background-color: #f1eee7;
+}
+.slider-single-project-wrap .wrapper {
+    padding: 0;
+}
+.slider-single-project {
+    width: 1024px;
+    float: left;
+}
+.slider-single-project .image-wrap {
+    width: 100%;
+    height: 510px;
+}
+.slider-single-project-wrap .slider-single-project-controls {
+    width: 256px;
+    float: right;
+    margin: 0;
+    counter-reset: li;
+}
+.slider-single-project-controls li.image-wrap {
+    display: block;
+    width: 128px;
+    height: 128px;
+    float: left;
+    cursor: pointer;
+}
+.slider-single-project-controls li:before {
+    content: counter(li);
+    counter-increment: li;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(220, 168, 39, 0.5);
+    z-index: 2;
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 35%;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+.slider-single-project-controls li:hover:before {
+    color: #676459;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.slider-single-project-controls li.active:before {
+    font-size: 60px;
+    background-color: transparent;
+    padding-top: 20%;
+    cursor: default;
+}
+.slider-single-project-controls li.active:hover:before {
+    color: #ffffff;
+    background-color: transparent;
+}
+.slider-single-project-controls .image-wrap img {
+    width: auto;
+    height: 100%;
+}
 
 /**********************
 ******* global ********
@@ -1793,7 +1996,7 @@ footer .phones:before {
     .top-banner-projects:after {
         display: none;
     }
-    .top-banner h1 {
+    .top-banner .category-name {
         font-size: 20px;
         color: #ffffff;
         position: static;

@@ -75,6 +75,20 @@ $(document).ready(function () {
         ]
     });
 
+    var projectSlider = $('.slider-single-project');
+    projectSlider.slick({
+        arrows: false
+    });
+    projectSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $('.slider-single-project-controls li').eq(currentSlide).removeClass('active');
+        $('.slider-single-project-controls li').eq(nextSlide).addClass('active');
+    });
+    $('.slider-single-project-controls li').click(function() {
+        var nextSlide = $(this).index();
+        projectSlider.slick('slickGoTo', nextSlide);
+    });
+
+
     /*** end of scripts for sliders **/
 
     /*** others scripts **/

@@ -61,13 +61,19 @@ $(document).ready(function () {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 769,
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 860,
                 settings: {
                     slidesToShow: 2
                 }
             },
             {
-                breakpoint: 481,
+                breakpoint: 560,
                 settings: {
                     slidesToShow: 1
                 }

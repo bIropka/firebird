@@ -31,7 +31,7 @@ $(document).ready(function () {
 
     /*** scripts for sliders **/
 
-    $('.slider-trustees').slick({
+    $('.slider-effect').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [

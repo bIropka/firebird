@@ -886,12 +886,12 @@ footer .phones:before {
 .trustees h2:before {
     margin-left: 2.5%;
 }
-.slider-trustees {
+.slider-effect {
     width: 100%;
     border: 2px solid #b6b0a0;
     position: relative;
 }
-.slider-trustees .slide {
+.slider-effect .slide {
     margin: 30px;
     position: relative;
     overflow: hidden;
@@ -899,7 +899,7 @@ footer .phones:before {
 .slick-slider .slide:focus {
     outline: none;
 }
-.slider-trustees .slide .overlay {
+.slider-effect .slide .overlay {
     border-bottom: 50px solid rgba(92, 124, 215, 0.8);
     border-left: 50px solid transparent;
     bottom: 0;
@@ -913,7 +913,7 @@ footer .phones:before {
     transition: all 0.5s ease-out;
     width: 0;
 }
-.slider-trustees .slide:hover .overlay {
+.slider-effect .slide:hover .overlay {
     border-bottom: 800px solid rgba(92, 124, 215, 0.8);
     border-left: 800px solid transparent;
     -moz-transition: all 0.5s ease-out;
@@ -921,7 +921,7 @@ footer .phones:before {
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 }
-.slider-trustees .slide .corner-overlay-content {
+.slider-effect .slide .corner-overlay-content {
     bottom: 0;
     color: #ffffff;
     font-family: 'Roboto Thin', sans-serif;
@@ -934,14 +934,14 @@ footer .phones:before {
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 }
-.slider-trustees .slide:hover .corner-overlay-content {
+.slider-effect .slide:hover .corner-overlay-content {
     opacity: 0;
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 }
-.slider-trustees .slide .overlay-content {
+.slider-effect .slide .overlay-content {
     bottom: 0;
     left: 0;
     opacity: 0;
@@ -955,11 +955,11 @@ footer .phones:before {
     text-align: center;
     padding-top: 50px;
 }
-.slider-trustees .slide .overlay-content h2 {
+.slider-effect .slide .overlay-content h2 {
     border-bottom: 1px solid #333;
     padding: 0 0 12px;
 }
-.slider-trustees .slide:hover .overlay-content {
+.slider-effect .slide:hover .overlay-content {
     opacity: 1;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
@@ -970,19 +970,19 @@ footer .phones:before {
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
 }
-.slider-trustees .slide .overlay-content p {
+.slider-effect .slide .overlay-content p {
     font-size: 18px;
     color: #ffffff;
     margin: 3px 0;
     letter-spacing: 1px;
 }
-.slider-trustees .slide .name {
+.slider-effect .slide .name {
     padding: 0 50px;
     text-transform: uppercase;
     font-size: 20px;
     line-height: 1.5;
 }
-.slider-trustees .slide .name:after {
+.slider-effect .slide .name:after {
     content: '';
     display: block;
     width: 30px;

@@ -215,6 +215,10 @@ h2:before {
     display: none;
 }
 
+.custom-button {
+
+}
+
 /* breadcrumbs */
 .breadcrumbs .wrapper {
     padding: 20px 2.5% 30px;

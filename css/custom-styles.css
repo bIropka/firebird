@@ -128,7 +128,7 @@ textarea, textarea:hover, textarea:active, textarea:focus {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 4% 2.5%;
+    padding: 2% 2.5%;
     position: relative;
 }
 .wrapper:after {
@@ -210,6 +210,43 @@ h2:before {
     height: 28px;
     margin: 0 2% 0 0;
     background-color: #b6b0a0;
+}
+.custom-select input, .custom-select label {
+    display: none;
+}
+
+/* breadcrumbs */
+.breadcrumbs .wrapper {
+    padding: 20px 2.5% 30px;
+}
+.breadcrumbs ul li, .breadcrumbs ul li a {
+    font-family: 'Roboto Condensed Bold', sans-serif;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.breadcrumbs ul li a {
+    display: inline-block;
+    margin-bottom: 2px;
+}
+.breadcrumbs ul li:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    margin: 0 15px 0 20px;
+}
+.breadcrumbs ul li:last-child:after {
+    display: none;
+}
+.breadcrumbs-projects ul li {
+    color: #d67c32;
+}
+.breadcrumbs-projects ul li:after {
+    background-color: #d67c32;
+}
+.breadcrumbs a:hover {
+    text-decoration: underline;
 }
 
 /**********************
@@ -424,6 +461,7 @@ nav ul li:hover a {
     -moz-transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    z-index: 2;
 }
 
 .header-menu ul li a::before {
@@ -632,6 +670,7 @@ footer[role='contentinfo'] {
     border: 1px solid #b6b0a0;
     background: transparent url('../source/content/background-footer.jpg') no-repeat center;
     background-size: cover;
+    margin-top: 50px;
 }
 footer .wrapper {
     padding: 0 2.5%;
@@ -1297,13 +1336,85 @@ footer .phones:before {
 
 /* project-list */
 .projects-list .wrapper {
-    padding: 4% 0;
+    padding: 0 0 2%;
 }
+
+/* custom-select */
+.custom-select {
+    display: inline-block;
+    width: 240px;
+    position: absolute;
+    right: 20%;
+    top: -3%;
+    border: 1px solid #676459;
+    background-color: #ffffff;
+    z-index: 3;
+}
+.custom-select .current-value {
+    display: block;
+    font-size: 15px;
+    text-transform: lowercase;
+    padding: 4px 20px 4px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+.custom-select .current-value:after {
+    content: '\25BC';
+    display: inline-block;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+.custom-select ul {
+    display: none;
+    padding: 15px 0;
+}
+.custom-select ul li {
+    display: block;
+    margin: 0 10px 10px 10px;
+    padding: 2px 15px;
+    cursor: pointer;
+}
+.custom-select ul li:hover {
+    background-color: #f1eee7;
+}
+.custom-select ul li:last-child {
+    margin-bottom: 0;
+}
+.custom-select.active .current-value {
+    border-bottom: 1px solid #676459;
+}
+.custom-select.active .current-value:after {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.custom-select.active ul {
+    display: block;
+}
+
+/* project */
 .project {
     display: block;
     position: relative;
     width: 100%;
     margin: 4% 0;
+}
+.project:first-child {
+    margin-top: 0;
 }
 .project:after {
     content: '';
@@ -1322,13 +1433,86 @@ footer .phones:before {
     float: left;
     border: 1px solid #b6b0a0;
     border-right: none;
-    padding: 2.5%;
+    padding: 30px;
 }
 .project-info .image-wrap {
-    width: 25%;
-    padding-top: 25%;
+    width: 260px;
+    height: 260px;
     float: left;
     margin-right: 3%;
+}
+.project-info h3 {
+    display: block;
+    font-family: 'Roboto Black', sans-serif;
+    font-size: 30px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    max-height: 90px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.project-info p {
+    display: block;
+    font-size: 20px;
+    line-height: 1.3;
+    max-height: 130px;
+    overflow: hidden;
+}
+.project-data {
+    display: block;
+    width: 20%;
+    height: 322px;
+    float: left;
+    border: 30px solid #f1eee7;
+    text-align: center;
+    padding: 10px;
+}
+.project-data div {
+    margin-bottom: 22px;
+}
+.project-data div:last-child {
+    margin-bottom: 0;
+}
+.project-data .value {
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 20px;
+}
+.page-nav {
+    text-align: center;
+}
+.page-prev, .page-next {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    cursor: pointer;
+}
+.page-prev:hover, .page-next:hover {
+    color: #db8929;
+    text-decoration: underline;
+}
+.page-nav ul {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 30px;
+}
+.page-nav ul li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 38px;
+    color: #b6b0a0;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+.page-nav ul li a:hover {
+    color: #676459;
+}
+.page-nav ul li a.active {
+    font-family: 'Roboto Bold', sans-serif;
+    color: #676459;
+    border-top: 2px solid #db8929;
+    border-bottom: 2px solid #db8929;
 }
 
 /**********************
@@ -1448,12 +1632,31 @@ footer .phones:before {
         min-width: 200px;
         margin-left: 30px;
     }
+    .project-info h3 {
+        font-size: 24px;
+        max-height: 70px;
+        margin-bottom: 10px;
+    }
+    .project-info .image-wrap {
+        width: 220px;
+        height: 220px;
+    }
+    .project-data {
+        height: 282px;
+        border: 20px solid #f1eee7;
+    }
+    .project-data div {
+        margin-bottom: 18px;
+    }
 }
 
 @media (max-width: 980px) {
     header[role='banner'] {
         background: #d0caba;
         margin-bottom: 0;
+    }
+    .trustees .wrapper {
+        padding: 50px 0 0;
     }
     .header-top .wrapper {
         padding: 0 2.5%;
@@ -1580,6 +1783,59 @@ footer .phones:before {
         width: 150px;
         margin: 5px 0;
     }
+    .header-menu ul li {
+        border-right: none;
+    }
+    .top-banner-projects:after {
+        display: none;
+    }
+    .top-banner h1 {
+        font-size: 20px;
+        color: #ffffff;
+        position: static;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+        text-align: center;
+    }
+    .top-banner-projects {
+        width: 50%;
+        background: linear-gradient(to right, #ff8e14, #ff7f08);
+        padding: 35px 0;
+    }
+    .top-banner .tagline {
+        display: none;
+    }
+    .sidebar-projects {
+        width: 50%;
+        position: static;
+        float: right;
+        background-color: #ffffff;
+        padding: 10px 0;
+    }
+    .sidebar-projects p {
+        font-size: 16px;
+    }
+    .sidebar-projects .projects-number {
+        font-size: 28px;
+    }
+    .project {
+        border: 1px solid #b6b0a0;
+    }
+    .project-data, .project-info {
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+    .project-data div {
+        width: 25%;
+        float: left;
+    }
+    .custom-select {
+        right: 2.5%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1587,6 +1843,7 @@ footer .phones:before {
         font-size: 24px;
         height: 24px;
         line-height: 24px;
+        margin-bottom: 30px;
     }
     h2:before {
         width: 18px;
@@ -1677,12 +1934,40 @@ footer .phones:before {
     .projects .wrapper, .news .wrapper {
         padding-bottom: 0;
     }
+    .project-info .image-wrap {
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .project-info h3 {
+        font-size: 18px;
+        max-height: 100%;
+        margin-bottom: 10px;
+    }
+    .project-info p {
+        font-size: 14px;
+        max-height: 100%;
+    }
+    .project-data div {
+        width: 50%;
+    }
+    .page-nav ul {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .projects-list {
+        margin-top: 30px;
+    }
+    .custom-select {
+        left: 2.5%;
+        right: auto;
+        top: -45px;
+    }
 }
 
 @media (max-width: 480px) {
 
     .project-card {
-        margin-top: 30px;
+        margin-bottom: 15px;
         padding-bottom: 50px;
     }
     .project-card .image-wrap {
@@ -1709,6 +1994,17 @@ footer .phones:before {
     }
     footer .phones a:last-child {
         display: block;
+    }
+    .page-nav {
+        margin: 30px 0 20px;
+    }
+    .page-nav ul li a {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+        line-height: 23px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
     }
 
 }

@@ -1295,6 +1295,42 @@ footer .phones:before {
     margin: 5px 0;
 }
 
+/* project-list */
+.projects-list .wrapper {
+    padding: 4% 0;
+}
+.project {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 4% 0;
+}
+.project:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.project .svg-wrapper {
+    left: 23%;
+    bottom: -18px;
+    right: auto;
+    top: auto;
+    background-color: #ffffff;
+}
+.project-info {
+    width: 80%;
+    float: left;
+    border: 1px solid #b6b0a0;
+    border-right: none;
+    padding: 2.5%;
+}
+.project-info .image-wrap {
+    width: 25%;
+    padding-top: 25%;
+    float: left;
+    margin-right: 3%;
+}
+
 /**********************
 ******* global ********
 **********************/

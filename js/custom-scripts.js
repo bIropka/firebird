@@ -134,9 +134,15 @@ $(document).ready(function () {
     });
 
     $(function($) {
-        $('.checked-form').validatr({
+        $('form').validatr({
             showall: true
         });
+    });
+
+    $('.form-submit').click(function() {
+        $(this).parents('form').find('.form-field:invalid').addClass('invalid-field');
+        $(this).parents('form').find('.form-field:valid').addClass('valid-field');
+        $(this).parents('form').find('.form-textarea').removeClass('valid-field invalid-field');
     });
 
     $('input[type="submit"]').click(function() {

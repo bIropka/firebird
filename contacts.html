@@ -128,6 +128,8 @@
 
         <div class="wrapper">
 
+            <a class="to-help" href="#"></a>
+
             <div class="school-name">
 
                 <p>Государственное бюджетное общеобразовательное учреждение начальная школа - детский сад №687 Центрального района Санкт-Петербурга</p>
@@ -220,23 +222,27 @@
 
         <div class="wrapper">
 
-            <form action="#" id="write-us" class="form-write-us">
+            <form action="#" id="write-us">
 
-                <p class="title">НАПИШИТЕ НАМ СЕЙЧАС</p>
+                <fieldset>
 
-                <label class="form-field-wrap">
-                    <input type="text" id="write-us-name" class="form-field" placeholder="Имя&#42;"/>
-                </label>
+                    <p class="title">НАПИШИТЕ НАМ СЕЙЧАС</p>
 
-                <label class="form-field-wrap">
-                    <input type="email" id="write-us-email" class="form-field" placeholder="E-mail&#42;"/>
-                </label>
+                    <label class="form-field-wrap form-textarea-wrap">
+                        <textarea id="write-us-text" cols="" rows="" class="form-field form-textarea" placeholder="Сообщение"></textarea>
+                    </label>
 
-                <label class="form-field-wrap form-textarea-wrap">
-                    <textarea id="write-us-text" cols="" rows="" class="form-field form-textarea" placeholder="Сообщение"></textarea>
-                </label>
+                    <label class="form-field-wrap">
+                        <input type="text" id="write-us-name" class="form-field" placeholder="Имя &#42;" required/>
+                    </label>
 
-                <input type="submit" value="ОТПРАВИТЬ"/>
+                    <label class="form-field-wrap">
+                        <input type="email" id="write-us-email" class="form-field" placeholder="E-mail &#42;" required/>
+                    </label>
+
+                </fieldset>
+
+                <button type="submit" class="form-submit">ОТПРАВИТЬ</button>
 
             </form>
 

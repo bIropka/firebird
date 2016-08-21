@@ -172,10 +172,10 @@ img {
     top: 0;
 }
 
-.form-field::-webkit-input-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
-.form-field::-moz-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
-.form-field:-moz-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
-.form-field:-ms-input-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
+.form-field::-webkit-input-placeholder {font-family: 'Roboto Regular', sans-serif; font-size: 15px;  opacity: 1; color: #ffffff;}
+.form-field::-moz-placeholder {font-family: 'Roboto Regular', sans-serif; font-size: 15px;  opacity: 1; color: #ffffff;}
+.form-field:-moz-placeholder {font-family: 'Roboto Regular', sans-serif; font-size: 15px;  opacity: 1; color: #ffffff;}
+.form-field:-ms-input-placeholder {font-family: 'Roboto Regular', sans-serif; font-size: 15px;  opacity: 1; color: #ffffff;}
 
 .form-field:focus::-webkit-input-placeholder {color: transparent;}
 .form-field:focus::-moz-placeholder {color: transparent;}
@@ -187,12 +187,10 @@ img {
 }
 
 .invalid-field {
-    border: 1px solid #ff0000!important;
-    background: url('../source/images/icon-invalid.png') no-repeat 98% center!important;
+    border-bottom: 1px solid #ff0000!important;
 }
 .valid-field {
-    border: 1px solid #008000!important;
-    background: url('../source/images/icon-valid.png') no-repeat 98% center!important;
+    border-bottom: 1px solid #008000!important;
 }
 h1 {
     font-family: 'Roboto Black', sans-serif;
@@ -241,6 +239,11 @@ h2:before {
     height: 3px;
 }
 
+.form-field {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 textarea {
     resize: none;
 }
@@ -1947,6 +1950,13 @@ footer .phones:before {
     background-color: #676459;
 }
 
+.contacts .wrapper {
+    padding-bottom: 5%;
+}
+.contacts .to-help {
+    bottom: 0;
+    right: 30px;
+}
 .contacts .school-name {
     position: static;
     width: 80%;
@@ -2059,6 +2069,74 @@ footer .phones:before {
 .write-us {
     background: transparent url('../source/content/background-write-us.jpg') no-repeat center;
     background-size: cover;
+}
+.write-us fieldset {
+    display: block;
+    border: none;
+}
+.write-us fieldset:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.write-us .title {
+    display: block;
+    width: 47.5%;
+    float: left;
+    font-family: 'Roboto Condensed Bold', sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+    letter-spacing: 5px;
+    line-height: 1;
+    margin-bottom: 32px;
+}
+.write-us .form-field-wrap {
+    display: block;
+    width: 47.5%;
+    height: 35px;
+    float: left;
+    margin-top: 10px;
+}
+.write-us .form-field {
+    font-size: 15px;
+    color: #ffffff;
+    background-color: transparent;
+    padding: 0 15px;
+    border-bottom: 1px solid #ffffff;
+}
+.write-us .form-textarea-wrap {
+    height: 160px;
+    float: right;
+    margin-top: 0;
+}
+.write-us .form-textarea {
+    padding: 10px 15px;
+    border: 1px solid #ffffff;
+}
+.write-us .form-submit {
+    display: block;
+    width: 260px;
+    height: 50px;
+    margin: 30px auto 0;
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    position: relative;
+    background-color: #ffffff;
+}
+.write-us .form-submit:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #c73746;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.write-us .form-submit:hover {
+    color: #ffffff;
+    background-color: #c73746;
 }
 
 /**********************
@@ -2190,6 +2268,33 @@ footer .phones:before {
         width: 100%;
         float: none;
         margin: 0;
+    }
+    .sidebar-contacts {
+        width: 170px;
+        height: 212px;
+        top: 18%;
+    }
+    .contacts .on-map {
+        float: none;
+        height: 300px;
+    }
+    .bank-details p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .in-rub .title {
+        margin-bottom: 56px;
+    }
+    .in-usd .sub-title {
+        margin: 5px 0;
+    }
+    .in-euro .sub-title {
+        margin: 51px 0 5px 0;
+    }
+    .write-us .title {
+        font-size: 28px;
+        letter-spacing: 4px;
+        margin-bottom: 40px;
     }
 }
 
@@ -2353,8 +2458,17 @@ footer .phones:before {
         background: linear-gradient(to right, #4291e1, #244caa);
         padding: 35px 0;
     }
+    .top-banner-contacts {
+        width: 100%;
+        background: #dddcdc;
+        padding: 35px 2.5%;
+        text-align: left;
+    }
     .top-banner .tagline, .top-banner-single-project .category-name {
         display: none;
+    }
+    .top-banner-contacts .category-name {
+        text-align: left;
     }
     .sidebar, .sidebar-single-project, .sidebar-volunteers {
         width: 50%;
@@ -2362,6 +2476,14 @@ footer .phones:before {
         float: right;
         background-color: #ffffff;
         padding: 10px 0;
+    }
+    .sidebar-contacts {
+        position: absolute;
+        float: none;
+        width: 170px;
+        height: 212px;
+        top: 0;
+        padding: 0;
     }
     .sidebar-single-project {
         padding: 0;
@@ -2413,6 +2535,7 @@ footer .phones:before {
     .slider-partners {
         width: 100%;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -2550,6 +2673,31 @@ footer .phones:before {
         font-size: 42px;
         padding-top: 20%;
     }
+    .contacts .school-name {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .in-rub, .in-usd, .in-euro {
+        width: 100%;
+        float: none;
+        position: relative;
+        background-color: transparent;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .bank-details .title, .bank-details .sub-title {
+        margin: 5px 0;
+    }
+    .write-us .form-field-wrap, .write-us .title {
+        float: none;
+        width: 100%;
+    }
+    .write-us .form-submit {
+        margin: 30px 0 0;
+    }
+    .write-us .wrapper {
+        padding: 20px 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2619,6 +2767,24 @@ footer .phones:before {
         height: 25px;
         line-height: 22px;
         font-size: 12px;
+    }
+    .top-banner-contacts {
+        display: none;
+    }
+    .sidebar-contacts {
+        position: static;
+        margin: 20px auto 0;
+    }
+    .contacts .school-name {
+        margin-top: 0;
+    }
+    .write-us .title {
+        font-size: 18px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+    .breadcrumbs .wrapper {
+        padding: 20px 2.5% 10px;
     }
 }
 

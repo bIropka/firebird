@@ -241,6 +241,10 @@ h2:before {
     height: 3px;
 }
 
+textarea {
+    resize: none;
+}
+
 /* breadcrumbs */
 .breadcrumbs .wrapper {
     padding: 20px 2.5% 30px;
@@ -1343,12 +1347,8 @@ footer .phones:before {
     color: #ffffff;
     padding-left: 45%;
 }
+
 .sidebar {
-    display: block;
-    width: 20%;
-    float: right;
-}
-.sidebar-projects {
     width: 18%;
     position: absolute;
     right: 0;
@@ -1357,13 +1357,13 @@ footer .phones:before {
     text-align: center;
     padding: 18px 0;
 }
-.sidebar-projects p {
+.sidebar p {
     font-family: 'Roboto Black', sans-serif;
     font-size: 24px;
     color: #d67c32;
     text-transform: uppercase;
 }
-.sidebar-projects .projects-number {
+.sidebar .projects-number {
     line-height: 1;
     font-size: 50px;
     margin: 5px 0;
@@ -1896,8 +1896,170 @@ footer .phones:before {
 }
 
 /**********************
-******* global ********
+****** contacts *******
 **********************/
+
+.contacts-top-block {
+    overflow: visible;
+}
+.top-banner-contacts {
+    background: #dddcdc url('../source/content/background-banner-contacts.png') no-repeat 95% 45%;
+    background-size: 80% auto;
+    position: relative;
+    padding: 9% 0 1% 0;
+}
+.top-banner-contacts:before {
+    background-color: #dddcdc;
+}
+.top-banner-contacts:after {
+    display: none;
+}
+.top-banner-contacts .category-name {
+    font-size: 20px;
+    color: #676459;
+    text-transform: uppercase;
+}
+.top-banner-contacts .tagline {
+    font-size: 30px;
+    color: #676459;
+    padding-left: 45%;
+}
+.sidebar-contacts {
+    width: 225px;
+    height: 280px;
+    bottom: auto;
+    top: 18%;
+    background-color: #ffffff;
+    padding: 0;
+    z-index: 3;
+}
+.sidebar-contacts .image-wrap {
+    width: 100%;
+    height: 100%;
+}
+.breadcrumbs-black ul{
+    width: 80%;
+}
+.breadcrumbs-black ul li, .breadcrumbs-black ul li a {
+    color: #676459;
+}
+.breadcrumbs-black ul li:after {
+    background-color: #676459;
+}
+
+.contacts .school-name {
+    position: static;
+    width: 80%;
+    padding: 0;
+    height: auto;
+    margin-bottom: 30px;
+}
+.contacts .school-name p:last-child {
+    font-family: 'Roboto Condensed Bold', sans-serif;
+    font-size: 25px;
+    color: #5b9dcf;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.contacts .on-map {
+    position: static;
+    width: 100%;
+    max-width: 768px;
+    float: right;
+    height: 340px;
+}
+.contacts-address, .contacts-phone, .contacts-email {
+    display: block;
+    max-width: 420px;
+    margin: 15px 0 25px;
+}
+.contacts h3 {
+    display: inline-block;
+    font-family: 'Roboto Condensed Bold', sans-serif;
+    color: #5b9dcf;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.contacts h3:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    background-color: #5b9dcf;
+    margin-bottom: 3px;
+    margin-right: 25px;
+}
+.contacts-address p, .contacts-phone a, .contacts-email a {
+    display: block;
+    font-family: 'Roboto Condensed Bold', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 1.7;
+}
+.contacts-email a {
+    text-transform: none;
+}
+.bank-details {
+    margin-top: 30px;
+}
+.bank-details h3 {
+    display: block;
+    border-bottom: 3px solid #b6b0a0;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+.in-rub, .in-usd, .in-euro {
+    width: 33.33333%;
+    float: left;
+    position: relative;
+    background-color: transparent;
+    padding: 0 0 0 15px;
+}
+.in-rub:before, .in-usd:before, .in-euro:before {
+    font-size: 250px;
+    line-height: 1;
+    color: #eeece3;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+}
+.in-rub:before {
+    content: '\20bd';
+}
+.in-usd:before {
+    content: '$';
+}
+.in-euro:before {
+    content: '\20AC';
+}
+.bank-details p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+.bank-details .title {
+    font-family: 'Roboto Bold', sans-serif;
+    text-transform: uppercase;
+}
+.bank-details .sub-title {
+    text-transform: uppercase;
+}
+.in-rub .title {
+    margin-bottom: 50px;
+}
+.in-usd .sub-title {
+    margin: 10px 0;
+}
+.in-euro .sub-title {
+    margin: 40px 0 10px 0;
+}
+
+/* write-us */
+.write-us {
+    background: transparent url('../source/content/background-write-us.jpg') no-repeat center;
+    background-size: cover;
+}
 
 /**********************
 ******* global ********
@@ -2194,7 +2356,7 @@ footer .phones:before {
     .top-banner .tagline, .top-banner-single-project .category-name {
         display: none;
     }
-    .sidebar-projects, .sidebar-single-project, .sidebar-volunteers {
+    .sidebar, .sidebar-single-project, .sidebar-volunteers {
         width: 50%;
         position: static;
         float: right;
@@ -2213,10 +2375,10 @@ footer .phones:before {
     .sidebar-single-project .left-column p {
         color: #676459;
     }
-    .sidebar-projects p {
+    .sidebar p {
         font-size: 16px;
     }
-    .sidebar-projects .projects-number {
+    .sidebar .projects-number {
         font-size: 28px;
     }
     .project {

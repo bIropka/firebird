@@ -2602,11 +2602,24 @@ article blockquote:hover {
     left: auto;
     right: 20%;
 }
-.single-news .show-all a {
+.single-news .show-all a span {
     text-transform: uppercase;
     font-family: 'Roboto Black', sans-serif;
     color: #b1127e;
     font-size: 10px;
+}
+.single-news .show-all i {
+    margin-left: 10px;
+    color: #b1127e;
+}
+.show-all .to-close {
+    display: none;
+}
+.show-all.active .to-close {
+    display: block;
+}
+.show-all.active .to-open {
+    display: none;
 }
 .single-news .shape {
     stroke: #b1127e;
@@ -3054,6 +3067,50 @@ article blockquote:hover {
         width: 650px;
         margin: auto;
     }
+    .news-panel {
+        float: none;
+        width: 100%;
+    }
+    .top-banner-news .category-name {
+        display: none;
+    }
+    .top-banner-news .form-mailing {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+    .top-banner-news .form-mailing .title, .top-banner-news .form-mailing fieldset {
+        float: none;
+        width: 100%;
+        max-width: 400px;
+    }
+    .top-banner-news .form-mailing fieldset {
+        margin-top: 30px;
+    }
+    .top-banner-news {
+        padding: 30px 15px;
+    }
+    .breadcrumbs-news {
+        padding: 0 15px;
+    }
+    .news-list {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .view-controls {
+        right: 15px;
+    }
+    .top-block-news .sidebar-study {
+        width: 100%;
+        float: none;
+    }
+    .archive {
+        margin-top: 30px;
+    }
+    .archive ul li, .archive ul li:last-child {
+        display: inline-block;
+        margin: 10px 5px;
+    }
 
 }
 
@@ -3260,6 +3317,15 @@ article blockquote:hover {
     .slider-video .slick-arrow {
         top: 130px;
     }
+    .top-banner-news {
+        background-size: cover;
+    }
+    .single-news .image-wrap {
+        float: none;
+    }
+    .single-news .news-data {
+        height: 285px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -3344,6 +3410,17 @@ article blockquote:hover {
         font-size: 18px;
         letter-spacing: 3px;
         margin-bottom: 20px;
+    }
+    .news-list {
+        margin-top: 40px;
+    }
+    .single-news .date {
+        display: inline-block;
+        position: static;
+        margin: 10px 0;
+    }
+    .single-news .news-data {
+        height: 310px;
     }
 }
 

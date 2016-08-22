@@ -188,6 +188,7 @@ $(document).ready(function () {
     });
 
     $('.single-news .show-all').click(function() {
+        $(this).toggleClass('active');
         $(this).siblings('.news-data').toggleClass('active');
         return false;
     });

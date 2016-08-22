@@ -2155,25 +2155,28 @@ article blockquote:hover {
     width: 80%;
     float: left;
 }
-.sidebar-study {
+.sidebar-single {
     width: 20%;
     float: right;
     padding: 25px;
     position: relative;
 }
-.sidebar-study .to-help {
+.sidebar-single .to-help {
     position: absolute;
     bottom: -80px;
     right: 30px;
 }
-.sidebar-study ul li {
+.sidebar-single ul {
+    margin: 20px;
+}
+.sidebar-single ul li {
     display: block;
     margin-bottom: 40px;
 }
-.sidebar-study ul li:last-child {
+.sidebar-single ul li:last-child {
     margin-bottom: 0;
 }
-.sidebar-study ul li a {
+.sidebar-single ul li a {
     display: inline-block;
     font-family: 'Roboto Black', sans-serif;
     font-size: 18px;
@@ -2182,7 +2185,7 @@ article blockquote:hover {
     position: relative;
     line-height: 1.4;
 }
-.sidebar-study ul li a:before {
+.sidebar-single ul li a:before {
     content: '';
     display: block;
     width: 10px;
@@ -2197,7 +2200,7 @@ article blockquote:hover {
     -o-transition: 0.6s;
     transition: 0.6s;
 }
-.sidebar-study ul li a:after {
+.sidebar-single ul li a:after {
     content: '';
     display: block;
     width: 0;
@@ -2212,14 +2215,14 @@ article blockquote:hover {
     -o-transition: 0.6s;
     transition: 0.6s;
 }
-.sidebar-study ul li a:hover:before {
+.sidebar-single ul li a:hover:before {
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
     transform: rotate(-180deg);
 }
-.sidebar-study ul li a:hover:after {
+.sidebar-single ul li a:hover:after {
     width: 100%;
 }
 
@@ -2253,7 +2256,7 @@ article blockquote:hover {
     font-size: 36px;
     padding-left: 30%;
 }
-.top-block-study .breadcrumbs {
+.top-block-single .breadcrumbs {
     width: 100%;
 }
 .study article {
@@ -2369,7 +2372,7 @@ article blockquote:hover {
     width: 80%;
     float: left;
 }
-.top-block-news {
+.top-block-single {
     overflow: visible;
 }
 .top-banner-news {
@@ -2379,6 +2382,7 @@ article blockquote:hover {
     background-size: 100% auto;
     position: relative;
     padding: 4% 0 2%;
+    height: 175px;
 }
 .top-banner-news .tagline {
     padding: 0;
@@ -2444,12 +2448,14 @@ article blockquote:hover {
     border:1px solid #ffffff;
     padding: 0 15px;
 }
-.top-block-news .sidebar-study {
-    padding: 15px 0 0 0;
+.top-block-single .sidebar-single {
+    padding: 0;
 }
 .archive {
     width: 100%;
     text-align: center;
+    height: 175px;
+    padding-top: 15px;
 }
 .archive .title {
     font-family: 'Roboto Black', sans-serif;
@@ -2484,19 +2490,18 @@ article blockquote:hover {
 .archive ul li a:before {
     display: none;
 }
-.top-block-news .sidebar-study .to-help {
+.top-block-single .sidebar-single .to-help {
     margin: auto;
     top: 0;
     bottom: 0;
     right: 0;
 }
-.sidebar-study .tags {
+.sidebar-single .tags {
     width: 100%;
     background-color: #e4e3e0;
-    margin-top: 32px;
     padding: 20px;
 }
-.sidebar-study .tags .title {
+.sidebar-single .tags .title {
     text-transform: uppercase;
     text-align: center;
     font-family: 'Roboto Black', sans-serif;
@@ -2505,18 +2510,18 @@ article blockquote:hover {
     color: #ffffff;
     margin-bottom: 20px;
 }
-.sidebar-study .tags a {
+.sidebar-single .tags a {
     display: inline-block;
     font-family: 'Roboto Condensed Bold', sans-serif;
     color: #b6b0a0;
     letter-spacing: 2px;
     margin: 5px 5px 5px 0;
 }
-.sidebar-study .tags a:hover {
+.sidebar-single .tags a:hover {
     color: inherit;
     text-decoration: underline;
 }
-.sidebar-study .tags a.active {
+.sidebar-single .tags a.active {
     color: #b1127e;
     font-size: 20px;
 }
@@ -2658,8 +2663,10 @@ article blockquote:hover {
 }
 
 /**********************
-******* global ********
+**** documents ********
 **********************/
+
+
 
 /**********************
 ******* global ********
@@ -2811,7 +2818,7 @@ article blockquote:hover {
         padding-left: 25%;
         width: 57%;
     }
-    .sidebar-study ul li a {
+    .sidebar-single ul li a {
         font-size: 16px;
     }
     h2 {
@@ -3089,8 +3096,9 @@ article blockquote:hover {
     }
     .top-banner-news {
         padding: 30px 15px;
+        height: auto;
     }
-    .breadcrumbs-news {
+    .breadcrumbs-news, .breadcrumbs-black {
         padding: 0 15px;
     }
     .news-list {
@@ -3100,12 +3108,13 @@ article blockquote:hover {
     .view-controls {
         right: 15px;
     }
-    .top-block-news .sidebar-study {
+    .top-block-single .sidebar-single {
         width: 100%;
         float: none;
     }
     .archive {
-        margin-top: 30px;
+        margin: 30px 0;
+        height: auto;
     }
     .archive ul li, .archive ul li:last-child {
         display: inline-block;
@@ -3280,14 +3289,14 @@ article blockquote:hover {
     .top-banner-study, .top-banner-text {
         display: none;
     }
-    .sidebar-study {
+    .sidebar-single {
         width: 100%;
         float: left;
     }
-    .sidebar-study .to-help {
+    .sidebar-single .to-help {
         bottom: 0;
     }
-    .sidebar-study ul li {
+    .sidebar-single ul li {
         margin-bottom: 10px;
     }
     .study {

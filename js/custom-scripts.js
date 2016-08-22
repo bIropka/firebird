@@ -187,5 +187,10 @@ $(document).ready(function () {
         $(this).parents('.custom-select').removeClass('active');
     });
 
+    $('.single-news .show-all').click(function() {
+        $(this).siblings('.news-data').toggleClass('active');
+        return false;
+    });
+
 
 });

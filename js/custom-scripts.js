@@ -146,6 +146,25 @@ $(document).ready(function () {
         ]
     });
 
+    $('.slider-documents').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
     /*** end of scripts for sliders **/
 
     /*** others scripts **/

@@ -212,5 +212,16 @@ $(document).ready(function () {
         return false;
     });
 
+    $('.tab-controls li').click(function() {
+        if(!$(this).hasClass('active')) {
+            var index = $(this).index();
+            console.log(index);
+            $('.tab-controls .active').removeClass('active');
+            $('.tabs .active').removeClass('active');
+            $(this).addClass('active');
+            $('.tabs>li').eq(index).addClass('active');
+;        }
+    });
+
 
 });

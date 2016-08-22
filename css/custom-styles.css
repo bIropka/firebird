@@ -990,7 +990,7 @@ footer .phones:before {
     letter-spacing: 1px;
 }
 .slider-effect .overlay-content p:first-child {
-    padding: 0 50px;
+    padding: 0;
     text-transform: uppercase;
     font-size: 20px;
     line-height: 1.5;
@@ -1348,6 +1348,7 @@ footer .phones:before {
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
+    text-transform: uppercase;
 }
 .top-banner .tagline, .top-banner-single-project h1 {
     font-family: 'Roboto Condensed Regular', sans-serif;
@@ -2151,6 +2152,12 @@ article blockquote:hover {
     width: 20%;
     float: right;
     padding: 25px;
+    position: relative;
+}
+.sidebar-study .to-help {
+    position: absolute;
+    bottom: -80px;
+    right: 30px;
 }
 .sidebar-study ul li {
     display: block;
@@ -2209,7 +2216,7 @@ article blockquote:hover {
     width: 100%;
 }
 
-.top-banner-study {
+.top-banner-study, .top-banner-text {
     width: 100%;
     background: #6c904d url('../source/content/background-banner-study.png') no-repeat left center;
     background-size: cover;
@@ -2217,18 +2224,27 @@ article blockquote:hover {
     padding: 5% 0 5% 0;
     float: none;
 }
-.top-banner-study:before {
+.top-banner-text {
+    background: #6c904d url('../source/content/background-banner-text.png') no-repeat left center;
+    background-size: cover;
+}
+.top-banner-study:before, .top-banner-text:before {
     background-color: #6c904d;
 }
 .top-banner-study:after {
     left: 24.95%;
 }
-.top-banner-study .category-name {
+.top-banner-text:after {
+    display: none;
 }
 .top-banner-study .tagline {
     font-size: 36px;
     padding-left: 30%;
     width: 60%;
+}
+.top-banner-text .tagline {
+    font-size: 36px;
+    padding-left: 30%;
 }
 .top-block-study .breadcrumbs {
     padding: 20px 2.5%;
@@ -2929,12 +2945,15 @@ article blockquote:hover {
     .write-us .wrapper {
         padding: 20px 10px;
     }
-    .top-banner-study {
+    .top-banner-study, .top-banner-text {
         display: none;
     }
     .sidebar-study {
         width: 100%;
         float: left;
+    }
+    .sidebar-study .to-help {
+        bottom: 0;
     }
     .sidebar-study ul li {
         margin-bottom: 10px;

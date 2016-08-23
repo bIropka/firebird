@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/slick.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/lightgallery.min.css"/>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="css/custom-styles.css"/>
 </head>
 <body>
@@ -433,12 +435,115 @@
 
 </footer>
 
+<div class="modal-window window-volunteers">
+    <form action="#" id="be-volunteer" class="form-be-volunteer">
+
+        <p class="title">СТАТЬ ВОЛОНТЕРОМ</p>
+
+        <fieldset>
+
+            <label class="form-field-wrap">
+                <input type="text" id="be-volunteer-name" class="form-field" placeholder="Имя &#42;" required/>
+            </label>
+
+            <label for="be-volunteer-birthday" class="datepicker-here-wrap">Дата рождения</label>
+            <input type="text" id="be-volunteer-birthday" class="datepicker-here"/>
+
+            <label class="form-field-wrap">
+                <input type="tel" id="be-volunteer-tel" class="form-field" placeholder="Контактный телефон &#42;" required/>
+            </label>
+
+            <label class="form-field-wrap">
+                <input type="email" id="be-volunteer-email" class="form-field" placeholder="E-mail &#42;" required/>
+            </label>
+
+            <label class="form-field-wrap">
+                <input type="text" id="be-volunteer-hobbies" class="form-field" placeholder="Интересы и хобби &#42;"/>
+            </label>
+
+        </fieldset>
+
+        <fieldset class="choose-skills">
+
+            <p class="sub-title">Навыки и умения которые могут вам пригодится</p>
+
+            <input type="checkbox" id="be-volunteer-skills-1" class="field-checkbox">
+            <label for="be-volunteer-skills-1" class="field-checkbox-wrap">знание ПК</label>
+
+            <input type="checkbox" id="be-volunteer-skills-2" class="field-checkbox">
+            <label for="be-volunteer-skills-2" class="field-checkbox-wrap">Фотография</label>
+
+            <input type="checkbox" id="be-volunteer-skills-3" class="field-checkbox">
+            <label for="be-volunteer-skills-3" class="field-checkbox-wrap">Художественное творчество</label>
+
+            <input type="checkbox" id="be-volunteer-skills-4" class="field-checkbox">
+            <label for="be-volunteer-skills-4" class="field-checkbox-wrap">Организация праздников</label>
+
+            <input type="checkbox" id="be-volunteer-skills-5" class="field-checkbox">
+            <label for="be-volunteer-skills-5" class="field-checkbox-wrap">Проведение праздников</label>
+
+            <input type="checkbox" id="be-volunteer-skills-6" class="field-checkbox">
+            <label for="be-volunteer-skills-6" class="field-checkbox-wrap">Другое</label>
+
+            <label class="form-field-wrap skills-other-wrap">
+                <input type="text" id="be-volunteer-skills-other" class="form-field" placeholder="опишите"/>
+            </label>
+
+        </fieldset>
+
+        <fieldset class="choose-days">
+
+            <p class="sub-title">Удобное для вас время участия</p>
+
+            <input type="checkbox" id="be-volunteer-days-1" class="field-checkbox">
+            <label for="be-volunteer-days-1" class="field-checkbox-wrap"></label>
+
+            <input type="checkbox" id="be-volunteer-days-2" class="field-checkbox">
+            <label for="be-volunteer-days-2" class="field-checkbox-wrap"></label>
+
+            <input type="checkbox" id="be-volunteer-days-3" class="field-checkbox">
+            <label for="be-volunteer-days-3" class="field-checkbox-wrap"></label>
+
+            <input type="checkbox" id="be-volunteer-days-4" class="field-checkbox">
+            <label for="be-volunteer-days-4" class="field-checkbox-wrap"></label>
+
+            <input type="checkbox" id="be-volunteer-days-5" class="field-checkbox">
+            <label for="be-volunteer-days-5" class="field-checkbox-wrap"></label>
+
+            <input type="checkbox" id="be-volunteer-days-6" class="field-checkbox">
+            <label for="be-volunteer-days-6" class="field-checkbox-wrap"></label>
+
+            <label for="be-volunteer-days-other" class="form-field-wrap days-other-wrap">Другое</label>
+            <input type="text" id="be-volunteer-days-other" class="form-field"/>
+
+        </fieldset>
+
+        <fieldset>
+
+            <p class="sub-title">Описание желаемой деятельности</p>
+
+            <label class="form-field-wrap form-textarea-wrap">
+                <textarea id="be-volunteer-text" cols="" rows="" class="form-field form-textarea" placeholder="Сообщение"></textarea>
+            </label>
+
+            <input type="checkbox" id="be-volunteer-experience" class="field-checkbox">
+            <label for="be-volunteer-experience" class="field-checkbox-wrap"></label>
+
+        </fieldset>
+
+        <button type="submit" class="custom-button">ОТПРАВИТЬ</button>
+
+    </form>
+</div>
+
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/validatr.min.js"></script>
 <script src="js/lightgallery.min.js"></script>
 <script src="js/lg-video.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.min.js"></script>
 <script src="js/custom-scripts.js"></script>
 </body>
 </html>
